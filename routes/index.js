@@ -10,6 +10,7 @@ router.param('quizId', quizController.load);
 
 router.get('/author', function(req, res) {
   res.render('author', { author: 'Ksantos' });
+  
 });
 
 router.get('/quizes', quizController.index);
