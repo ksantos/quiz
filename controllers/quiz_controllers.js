@@ -17,6 +17,13 @@ exports.index=function(req,res){
   }).catch(function(error){next(error);})
 };
 
+exports.searchText = function(req,res){
+  var text = "%" + req.query.searchText + "%";
+  models.Quiz.findAll({where:["pregunta like ?", text]}).then(function(quizes){
+      res.render('quizes/index',{quizes:quizes});
+  }).catch(function(error){next(error);})
+};
+
 //get /quizes/question
 exports.show = function(req,res){
 
@@ -26,7 +33,7 @@ exports.show = function(req,res){
 //get /quizes/answer
 exports.answer = function(req,res){
   var resultado = 'Incorrecto';
-  if(req.query.respuesta === req.quiz.respeusta){
+  if(req.query.respuesta === req.quiz.respuesta){
     resultado='Correcto';
   }
 
