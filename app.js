@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var partials = require('express-partials');
-//3prueba 23d322
+//3prueba 236d322
 
 var routes = require('./routes/index');
 //var users = require('./routes/users');
