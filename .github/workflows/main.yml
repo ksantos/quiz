@@ -13,7 +13,7 @@ jobs:
       with:
         fetch-depth: 0
    # - uses: wangchucheng/git-repo-sync@v0.1.0
-    - uses: ksantos/mirror@v1.0.0
+    - uses: ksantos/mirror@v1.0.1
       with:
         # Such as https://github.com/wangchucheng/git-repo-sync.git
         target-url: ${{ secrets.TARGET_URL }}
